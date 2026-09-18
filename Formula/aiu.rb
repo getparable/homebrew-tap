@@ -7,7 +7,7 @@ class Aiu < Formula
   head "https://github.com/getparable/aiu.git", branch: "main"
 
   depends_on "go" => :build
-  depends_on xcode: ["26.0", :build]
+  depends_on xcode: ["27.0", :build]
   depends_on macos: :tahoe
 
   # The CLI and the menu bar app are one build on purpose: `aiu` in the Cellar is a

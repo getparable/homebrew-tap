@@ -12,7 +12,7 @@ brew install getparable/tap/aiu
 for every account you hold, in the menu bar and in the terminal, and switches which
 account Claude Code or Codex is signed in as.
 
-The formula **builds from source**: it needs Xcode 26 and macOS 26, and compiles
+The formula **builds from source**: it needs Xcode 27 (Swift 6.4) and macOS 26, and compiles
 both the Go CLI and the SwiftUI menu bar app. Because Homebrew builds it on your own
 machine, the result carries no quarantine flag and Gatekeeper never gets in the way —
 but it is not a notarized build either. The app that runs is the one brew just built.
