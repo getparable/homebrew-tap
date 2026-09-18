@@ -25,3 +25,20 @@ After installing, link the app where macOS looks for it:
 ln -sfn "$(brew --prefix aiu)/AIU.app" ~/Applications/AIU.app
 open ~/Applications/AIU.app
 ```
+
+## Releasing a new version
+
+The runbook lives with the app, not here: **[aiu → README → Releasing](https://github.com/getparable/aiu#releasing)**.
+The order matters — the bottle has to be built and uploaded to the GitHub release
+*before* this formula points at it.
+
+Bumping the formula without doing that does not fail. Homebrew falls back to building
+from source, so installs still succeed; they just take minutes and need Xcode again.
+`scripts/check-formula.py` guards against it, in CI and locally:
+
+```sh
+python3 scripts/check-formula.py
+```
+
+It fails if a formula's `url` and its bottle's `root_url` name different versions, or if
+the bottle they name is not actually downloadable from the release.

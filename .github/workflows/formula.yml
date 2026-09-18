@@ -1,0 +1,21 @@
+name: Formula
+
+# A missing or misnamed bottle does not break `brew install` — Homebrew quietly builds
+# from source instead, so nothing reports a problem and the only symptom is an install
+# that suddenly takes minutes and needs Xcode. Nothing else catches that, so this does.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  formula:
+    name: Bottles are present and match
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - run: python3 scripts/check-formula.py
