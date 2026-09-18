@@ -1,8 +1,8 @@
 class Aiu < Formula
   desc "Live Claude and Codex usage limits for every account you hold"
   homepage "https://github.com/getparable/aiu"
-  url "https://github.com/getparable/aiu/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "8a89b06fc9ee93ea141d18a01f4daffd2e2c39d45bc07a2fc0ec4c0967faab1c"
+  url "https://github.com/getparable/aiu/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "1795c724fc31b5690e6e20265198de85a2181e91f3abdce0acf5a9c7cd97fac7"
   license "MIT"
   head "https://github.com/getparable/aiu.git", branch: "main"
 
