@@ -6,6 +6,14 @@ class Aiu < Formula
   license "MIT"
   head "https://github.com/getparable/aiu.git", branch: "main"
 
+  # Prebuilt for Apple Silicon on macOS 26, so the usual install pours in seconds and
+  # needs no Xcode. Anything else — an Intel Mac — falls through to the source build
+  # below, which is why the Xcode dependency stays.
+  bottle do
+    root_url "https://github.com/getparable/aiu/releases/download/v0.1.3"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "af5c168a3ce3de017285fed494ae155ad0a272451c1283e1cfa86f109ee4981e"
+  end
+
   depends_on "go" => :build
   depends_on xcode: ["27.0", :build]
   depends_on macos: :tahoe
