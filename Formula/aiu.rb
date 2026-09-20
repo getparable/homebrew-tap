@@ -1,8 +1,8 @@
 class Aiu < Formula
   desc "Live Claude and Codex usage limits for every account you hold"
   homepage "https://github.com/getparable/aiu"
-  url "https://github.com/getparable/aiu/archive/refs/tags/v0.1.3.tar.gz"
-  sha256 "455bafdc5c215136ea078b17ef69ea06d5aa1aa80b84dbdd1399356a2667978e"
+  url "https://github.com/getparable/aiu/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "c25e7f96b845b36b1eed706679d7e709ce2b4b521df7706ee07e9ba84795956b"
   license "MIT"
   head "https://github.com/getparable/aiu.git", branch: "main"
 
@@ -10,8 +10,8 @@ class Aiu < Formula
   # needs no Xcode. Anything else — an Intel Mac — falls through to the source build
   # below, which is why the Xcode dependency stays.
   bottle do
-    root_url "https://github.com/getparable/aiu/releases/download/v0.1.3"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe: "af5c168a3ce3de017285fed494ae155ad0a272451c1283e1cfa86f109ee4981e"
+    root_url "https://github.com/getparable/aiu/releases/download/v0.2.0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "bce5aecac9a5af773a19af0ef81c5a1547e0ae60100dab1ee8ab482a3732b152"
   end
 
   depends_on "go" => :build
