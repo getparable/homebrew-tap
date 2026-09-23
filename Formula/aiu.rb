@@ -1,17 +1,16 @@
 class Aiu < Formula
   desc "Live Claude and Codex usage limits for every account you hold"
   homepage "https://github.com/getparable/aiu"
-  url "https://github.com/getparable/aiu/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "c25e7f96b845b36b1eed706679d7e709ce2b4b521df7706ee07e9ba84795956b"
+  url "https://github.com/getparable/aiu/archive/refs/tags/v0.3.0.tar.gz"
+  sha256 "93e7f753da37b2f946355d5d3e2db63237933acdee9e50f3e7f9f167eb25b28c"
   license "MIT"
   head "https://github.com/getparable/aiu.git", branch: "main"
 
-  # Prebuilt for Apple Silicon on macOS 26, so the usual install pours in seconds and
-  # needs no Xcode. Anything else — an Intel Mac — falls through to the source build
-  # below, which is why the Xcode dependency stays.
+  # Prebuilt for Apple Silicon on macOS 27, so installs there pour in seconds and
+  # need no Xcode. Other supported Macs build from source with Xcode 27.
   bottle do
-    root_url "https://github.com/getparable/aiu/releases/download/v0.2.0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe: "bce5aecac9a5af773a19af0ef81c5a1547e0ae60100dab1ee8ab482a3732b152"
+    root_url "https://github.com/getparable/aiu/releases/download/v0.3.0"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "53165a9869b4156e3c8e092cab6f08c9d005c0e618c6b0c7c45a10c9609aa364"
   end
 
   depends_on "go" => :build

@@ -12,9 +12,9 @@ brew install getparable/tap/aiu
 for every account you hold, in the menu bar and in the terminal, and switches which
 account Claude Code or Codex is signed in as.
 
-On Apple Silicon running macOS 26 this pours a prebuilt bottle in a couple of seconds,
-with no compiler and no Xcode involved. An Intel Mac has no bottle and builds from
-source instead, which needs Xcode 27 (Swift 6.4).
+On Apple Silicon running macOS 27 this pours a prebuilt bottle in a couple of seconds,
+with no compiler and no Xcode involved. Other supported Macs build from source,
+which needs Xcode 27 (Swift 6.4).
 
 Either way the result carries no quarantine flag, so Gatekeeper never gets in the way.
 It is ad-hoc signed rather than notarized.
