@@ -17,7 +17,9 @@ with no compiler and no Xcode involved. Other supported Macs build from source,
 which needs Xcode 27 (Swift 6.4).
 
 Either way the result carries no quarantine flag, so Gatekeeper never gets in the way.
-It is ad-hoc signed rather than notarized.
+The Apple Silicon macOS 27 bottle is signed with Parable's Developer ID Application
+certificate. Source builds use an ad hoc signature when the build cannot access a
+Developer ID Application signing identity. The Homebrew bottle is not notarized.
 
 After installing, link the app where macOS looks for it:
 
