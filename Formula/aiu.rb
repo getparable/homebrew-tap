@@ -1,16 +1,16 @@
 class Aiu < Formula
   desc "Live Claude and Codex usage limits for every account you hold"
   homepage "https://github.com/getparable/aiu"
-  url "https://github.com/getparable/aiu/archive/refs/tags/v0.3.5.tar.gz"
-  sha256 "27cd84a0f0917146fe9f7309668abec9d568153c0af154accc3600669c98a260"
+  url "https://github.com/getparable/aiu/archive/refs/tags/v0.3.6.tar.gz"
+  sha256 "4bf9299024982ab454ea37c94ef47c744a652098097b961ad45c02aec08a52fe"
   license "MIT"
   head "https://github.com/getparable/aiu.git", branch: "main"
 
   # Prebuilt for Apple Silicon on macOS 27, so installs there pour in seconds and
   # need no Xcode. Other supported Macs build from source with Xcode 27.
   bottle do
-    root_url "https://github.com/getparable/aiu/releases/download/v0.3.5"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "01d452c2afa587e1cef4c091cee5675b729c15d7da7f47b76c97a1b2f12ca9ff"
+    root_url "https://github.com/getparable/aiu/releases/download/v0.3.6"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2708ac6d31ff77010b043143fb685f4e871e40fe334cc205fe7bf1c41264042c"
   end
 
   depends_on "go" => :build
